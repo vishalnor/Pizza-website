@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>personal website</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+       <style>
+          *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "ubuntu",sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: #48dbfb60;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #353b48;
+}
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    top:0;
+    z-index: 999;
+    transition: .3s linear;
+}
+
+.inner-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 65px;
+    height: 65px;
+    background-image: url(Ggtt.png);
+    background-size: contain;
+    
+}
+
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+}
+
+.menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+
+}
+
+.navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .2s linear;
+}
+
+.navbar-menu a:hover{
+    color: #48dbfb !important;
+}
+
+.sticky{
+    background-color: #fff;
+    padding: 18px 0;
+}
+
+.sticky #rh{
+    background-image: url(black-logo.png);
+    width: 44px;
+    height: 32px;
+    background-size: contain;
+}
+
+.sticky .navbar-menu a{
+    color: #111;
+}
+
+.sticky .menu-toggler span{
+    background-color: #111;
+}
+#home{
+    height: 100vh;
+    min-height: 500px;
+    background: url(mm1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home .inner-width{
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+    height: 100%;
+    text-align: center;
+}
+
+#home .content{
+    width: 100%;
+    color: #fff;
+
+}
+
+#home .content h1{
+    font-size: 60px;
+   margin-bottom:60px;
+
+}
+
+#home .content h1::after{
+    content: "Mehul";
+    animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim{
+    25%{
+        content: " A Developer";
+    }
+    50%{
+        content: " A Designer";
+    }
+    75%{
+        content: " A Web Dev";
+    }
+}
+
+.sm a{
+    color: #fff;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: .2s linear;
+}
+
+.sm a:hover{
+    color: #48dbfb;
+    background-color: transparent;
+    box-shadow: 0 0 10px #48dbfb, 0 0 40px #48dbfb,  0 0 80px #48dbfb;
+    transition-delay: 0.5ms;
+}
+
+#home .buttons{
+    margin-top: 60px;
+}
+
+#home .buttons a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: #48dbfb;
+    font-size: 20px;
+    font-weight: 500px;
+    width: 180;
+    border: 1px transparent;
+    padding: 16px 5px 16px 5px;
+    border-radius: 6px;
+    transition: .2s linear;
+}
+
+#home .buttons a:hover,
+#home .buttons a:nth-child(2)
+{
+    background-color:  #48dbfb;
+    color: black;
+    box-shadow: 0 0 10px #48dbfb, 0 0 40px #48dbfb,  0 0 80px #48dbfb;
+    transition-delay: 0.5ms;
+}
+
+
+section{
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: #111;
+}
+
+.section-title::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #111;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background-color: #48dbfb;
+    border: 4px solid #f1f1f1;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-pic{
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.about-text{
+    flex: 1;
+}
+
+.about-text h3{
+    margin: 10px 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.about-text h3 span:nth-child(1):after,
+.about-text h3 span:nth-child(2):after{
+    content:"";
+    width: 6px;
+   height: 6px;
+   background-color: #444;
+   display: inline-block;
+   border-radius: 50%;
+   margin: 0 14px;
+}
+ 
+.about-text p{
+    font-size: 17px;
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+.skills{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill{
+    width: calc(50% - 20%);
+    margin: 15px 0;
+}
+
+.skill-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-bar{
+    height: 3px;
+    background-color: #ddd;
+    margin-top: 14px;
+    position: relative;
+}
+
+.skill-bar::after{
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: #48dbfb;
+    bottom: 0;
+}
+
+.html:after{
+    width: 90%;
+}
+
+.css:after{
+    width: 80%;
+}
+
+.js:after{
+    width: 70%;
+}
+
+.php:after{
+    width: 60%;
+}
+
+.Mysql:after{
+    width: 90%;
+}
+
+.cs:after{
+    width: 80%;
+}
+
+section.dark{
+ background-color:#353b48;
+}
+
+section.dark .section-title{
+    color: #f1f1f1;
+}
+
+section.dark .section-title::before{
+    background-color: #f1f1f1;
+}
+
+section.dark .section-title::after{
+    border: 4px solid #353b48;
+}
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.service{
+    width: calc(33% - 20px);
+    text-align: center;
+    border: 1px solid #48dbfb;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 40px 20px;
+    color: black;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.service .icon{
+    color: #0ae9b8;
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+}
+
+.service h4{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.service:hover{
+    background-color: #48dbfb;
+}
+
+.service:hover .icon{
+    color:#111;
+}
+
+.time-line,.works{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block{
+    width: calc(50% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 30px;
+    position: relative;
+   
+}
+.block::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background-color: #ddd;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.block::after{
+
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #48dbfb;
+    left: -28px;
+    top: 30px;
+    border-radius: 50%;
+
+}
+.block h3{
+    font-size: 16px;
+    margin: 10px 0;
+}
+.block p{
+    font-size: 15px;
+    color:#444 ;
+}
+
+.work{
+    width: calc(33% - 10px);
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.work img{
+    width: 100%;
+    height: 100%;
+    transition: .4s linear;
+}
+
+.work::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #68e3ffcc;
+    transition: .2s linear;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.work .info{
+    position: absolute;
+    z-index: 2;
+    bottom: 4px;
+    left: 40px;
+    color:#ddd;
+    transition: .4s linear;
+    opacity: 0;
+}
+
+.work:hover img{
+      transform: scale(1.6) rotate(25deg);
+}
+
+.work:hover::before,
+.work:hover .info
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.contact-info .item{
+    width: calc(33% - 20px);
+    height: 160px;
+    background-color: #353b48;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.contact-info i{
+    display: block;
+    font-size: 40px;
+    line-height: 120px;
+    height: 100px;
+}
+
+.contact-info .item:hover{
+    background-color: #48dbfb;
+}
+
+.contact-form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: #353b48;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.nameZone, .emailZone{
+    max-width: calc(50% - 10px);
+}
+
+.messageZone{
+    min-height: 200px;
+    resize: vertical;
+}
+
+.contact-form .btn{
+    width: 180px;
+   background-color: transparent;
+   color: #48dbfb;
+   box-shadow: 0 0 10px #48dbfb, 0 0 40px #48dbfb,  0 0 80px #48dbfb;
+    transition-delay: 0.5ms;
+   font-size: 16px;
+   border: 2px solid #48dbfb;
+   padding: 0;
+   margin-left: auto;
+   cursor: pointer;
+   transition: .3s linear;
+}
+
+.contact-form .btn:hover{
+    background-color: #48dbfb;
+    color: #fff;
+}
+
+footer{
+    background: url(mm1.jpg);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.copyright{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.copyright a{
+    font-size: 16px;
+    color: #48dbfb;
+    font-weight: 500;
+}
+
+.goTop{
+    position: fixed;
+    z-index: 999;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #48dbfb;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    display: none;
+
+
+}
+
+@media screen and (max-width: 980px){
+    .menu-toggler{
+        display: block;
+    }
+    
+    .navbar-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #353b48;
+        top: 0;
+        right: -100%;
+        max-width: 400px;
+        padding: 80px 50px;
+        transition: .3s linear;
+    }
+
+    .navbar-menu a{
+        display: block;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    .sticky .navbar-menu{
+        background-color: #f1f1f1;
+        
+    }
+
+}
+    .navbar-menu.active{
+        right: 0;
+    }
+
+    .menu-toggler.active span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+
+    .menu-toggler.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggler.active span:nth-child(3){
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+
+    .inner-width{
+        max-width: 800px;
+    }
+    .about-pic{
+        margin: 0 auto 10px;
+    }
+  .about-text{
+      flex: 100%;
+      text-align: center;
+  }
+  .service{
+    width: calc(50% - 20px);
+    
+}
+
+.block{
+    width: calc(100% - 20px);
+    margin-left: auto; 
+ }
+.work{
+    width: calc(50% - 10px);
+}
+
+.contact-info .item{
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .inner-width{
+        padding: 0 20px;
+    }
+    .skill{
+        width: 100%;
+    }
+    .service{
+        width: 100%;
+    }
+    .work{
+        width: 100%;
+    }
+    .nameZone, .emailZone{
+        max-width: 100%;
+    }
+}
+       </style>
+    </head>
+    <body>
+            <!-- navbar -->
+            <nav class="navbar">
+                <div class="inner-width">
+                    <a href="#" class="logo" id="rh"></a>
+                    <button class="menu-toggler">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="navbar-menu"> 
+                       
+                        <a href="#home">Home </a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#education">Education</a>
+                        <a href="#works">Work</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                
+      
+            </nav>  
+
+            <!--home-->
+            <section id="home">
+                <div class="inner-width">
+                    <div class="content">
+                        <h1>Hi I'm</h1>
+                        <div class="sm">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin-in"></a>
+                            <a href="#" class="fab fa-youtube"></a>
+                        </div>
+                        <div class="buttons">
+                            <a href="calculator.html">Calculator</a>
+                            <a href="hogin.html">Login Page</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--home-->
+<section id="about">
+    <div class="inner-width">
+        <h1 class="section-title">About</h1>
+        <div class="about-content">
+           <img src="images/dd.jpg" width="150" height="150" alt="" class="about-pic">
+           <div class="content-text">
+              <h1>Hi! I'm Mehul</h1>
+              <h3>
+                  <span>#Web Developer</span>
+                  <span>#Self Learner</span>
+                  <span>#Student</span>
+              </h3>
+              <p>
+                 I am doing My Bsc(IT) from Nagindas Khandwala College in information technology and I have some knowledge in Python,Mysql,C#,C object,kotlin,Swift,html,css and javascript,php,mysql.
+              </p>
+           </div>
+        </div>
+        <div class="skills">
+        <div class="skill">
+        <div class="skill-info">
+           <span>HTML</span>
+           <span>90%</span>
+        </div>
+           <div class="skill-bar html"></div>
+         </div>
+        
+         <div class="skill">
+            <div class="skill-info">
+               <span>CSS</span>
+               <span>80%</span>
+            </div>
+               <div class="skill-bar css"></div>
+             </div>
+
+             <div class="skill">
+                <div class="skill-info">
+                   <span>javascript</span>
+                   <span>70%</span>
+                </div>
+                   <div class="skill-bar js"></div>
+                 </div>
+
+                 
+
+                     <div class="skill">
+                        <div class="skill-info">
+                           <span>php</span>
+                           <span>60%</span>
+                        </div>
+                           <div class="skill-bar php"></div>
+                         </div>
+
+                         <div class="skill">
+                            <div class="skill-info">
+                               <span>Mysql</span>
+                               <span>90%</span>
+                            </div>
+                               <div class="skill-bar Mysql"></div>
+                             </div>
+
+                             <div class="skill">
+                                <div class="skill-info">
+                                   <span>C#</span>
+                                   <span>80%</span>
+                                </div>
+                                   <div class="skill-bar cs"></div>
+                                 </div>
+        </div>
+      </div>
+</section> 
+
+<!--service-->
+
+<section id="services" class="dark">
+   <div class="inner-width">
+      <h1 class="section-title">Services</h1>
+      <div class="services">
+         <div class="service">
+            <i class="icon fas fa-paint-brush"></i>
+            <h4>design</h4>
+            <p>For presentaion design we will use power point to make page interactive.</p>
+         </div>
+
+         <div class="service">
+            <i class=" icon fa fa-pager"></i>
+            <h4>Build Website</h4>
+            <p>Build website using HTML,CSS and js,php,
+                bootstrap.</p>
+         </div>
+
+         <div class="service">
+            <i class="icon fas fa-database"></i>
+            <h4>Manage database</h4>
+            <p>A databace management system(DBMS)is system software for creating and managing database.</p>
+         </div>
+
+         <div class="service">
+            <i class="icon fab fa-android"></i>
+            <h4>Android app</h4>
+            <p>JAVA is the official language for Android App Delvelopment.</p>
+         </div>
+
+         <div class="service">
+            <i class=" icon fas fa-credit-card"></i>
+            <h4>Ui design</h4>
+            <p>User interface (UI) design is process designer use to build interfaces in software oe computerized.</p>
+         </div>
+
+         <div class="service">
+            <i class="icon fas fa-keyboard"></i>
+            <h4>edit text</h4>
+            <p>Choosing the input type configure the keyboard type that is shown,acceptable characters,and appearance of edit taxt.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!--education-->
+<section id="education">
+   <div class="inner-width">
+      <h1 class="section-title">Education & Experiences</h1>
+      <div class="time-line">
+         <div class="block">
+            <h4>Karishma Murkar</h4>
+            <h3>software engineering</h3>   
+            <p> I am doing My Bsc(IT) from Nagindas Khandwala College in information technology and I have some knowledge in HTML and CSS.</p>
+            <p><b>Instagram Id:- karishma_263</b></p>
+         </div>
+
+         <div class="block">
+            <h4>Komal Menaria</h4>
+            <h3>software engineering</h3>
+            <p>I am doing My Bsc(IT) from Nagindas Khandwala College in information technology and I have some knowledge in Python.</p>
+            <p><b>Instagram Id:- k_i_i_t_t_u</b></p>
+         </div>
+
+         <div class="block">
+            <h4>Dharmit Shah</h4>
+            <h3>software engineering</h3>
+            <p>I am doing My Bsc(IT) from Nagindas Khandwala College in information technology and I have some knowledge in C programming.</p>
+            <p><b>Instagram Id:- sdharmitt</b></p>
+         </div>
+
+         <div class="block">
+            <h4>Chintan Darji</h4>
+            <h3>software engineering</h3>
+            <p>I am doing My Bsc(IT) from Dalmia Lions College in information technology and I have some knowledge in C++.</p>
+            <p><b>Instagram Id:- Chintannn20</b></p>
+         </div>
+
+         <div class="block">
+            <h4>Nikhil Gohil</h4>
+            <h3>software engineering</h3>
+            <p>I am doing My Bsc(IT) from Dalmia Lions College in information technology and I have some knowledge in java and core java. </p>
+            <p><strong>Instagram Id:- nikhil455455</strong></p>
+         </div>
+
+         <div class="block">
+            <h4>Dheeraj Shetty </h4>
+            <h3>App Developing</h3>
+            <p>I am doing My Bsc(IT) from KES College in information technology and I have some knowledge in Kotlin for android app developing.</p>
+            <p><b>Instagram Id:- dheerajs__99</b></p>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!--works-->
+
+
+<section id="works" class="dark">
+   <div class="inner-width">
+      <h1 class="section-title">Works</h1>
+      <div class="works">
+         <a href="images/works/mm2.jpg" class="work">
+            <img src="images/works/mm2.jpg"alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">Laptop</div>
+            </div>
+         </a>
+
+         <a href="images/works/mm2.jpg" class="work">
+            <img src="images/works/mm2.jpg" alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">Laptop</div>
+            </div>
+         </a>
+
+         <a href="images/works/mm3.jpg" class="work">
+            <img src="images/works/mm3.jpg" alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">coding</div>
+            </div>
+         </a>
+
+         <a href="images/works/mm3.jpg" class="work">
+            <img src="images/works/mm3.jpg" alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">Coding</div>
+            </div>
+         </a>
+
+         <a href="images/works/mm4.jpg" class="work">
+            <img src="images/works/mm4.jpg" alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">coding,laptop</div>
+            </div>
+         </a>
+
+         <a href="images/works/mm4.jpg" class="work">
+            <img src="images/works/mm4.jpg" alt="">
+            <div class="info">
+               <h3>Work Title</h3>
+               <div class="cat">coding,laptop</div>
+            </div>
+         </a>
+      </div>
+   </div>
+</section>
+
+<!--contact-->
+
+<section id="contact">
+   <div class="inner-width">
+      <h1 class="section-title">Contact</h1>
+      <div class="contact-info">
+         <div class="item">
+            <i class="fas fa-mobile-alt"></i>
+            +91 1234567890
+         </div>
+
+         <div class="item">
+            <i class="fas fa-envelope"></i>
+            Email@address.com
+         </div>
+
+         <div class="item">
+            <i class="fas fa-map-marker-alt"></i>
+            Mumbai, Maharashtra
+         </div>
+      </div>
+      <form action="" class="contact-form">
+         <input type="text" class="nameZone" placeholder="Your Full Name">
+         <input type="email" class="emailZone" placeholder="Your Email">
+         <input type="text" class="subjectZone" placeholder="Subject">
+        <textarea class="messageZone" placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+   </div>
+</section>
+
+<!--footer-->
+
+<footer>
+   <div class="inner-width">
+      <div class="copyright">
+         &copy; 2021 | Created & designed by <a href="#">WebGohil</a>
+      </div>
+      <div class="sm">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a>
+      </div>
+   </div>
+</footer>
+
+<!--Go Top button-->
+
+<button class="goTop fas fa-arrow-up"></button>
+
+ </body>
+</html>
+<script type="text/javascript">
+   $(document).ready(function(){
+  $(window).scroll(function(){
+        if(this.scrollY > 20){
+          $(".navbar").addClass("sticky");
+          $(".goTop").fadeIn();
+        }
+        else{
+          $(".navbar").removeClass("sticky");
+          $(".goTop").fadeOut();
+        }
+   });
+
+   $(".goTop").click(function(){scroll(0,0)});
+   
+   $('.menu-toggler').click(function(){
+    $(this).toggleClass("active");   
+    $(".navbar-menu").toggleClass("active");
+
+  });
+
+  $(".works").magnificPopup({
+    delegate:'a',
+    type:'image',
+    gallery:{enabled:true}
+  });
+  });
+      
+</script>
